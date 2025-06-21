@@ -1,0 +1,102 @@
+html {
+  margin: 0;
+  padding: 0;
+}
+
+
+.navbar {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  margin: 15px;
+  border-radius: 10%;
+}
+
+
+body {
+  display: flex;
+  background-image: url('../Images/backgroundw.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100%;
+  margin: 0;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
+}
+
+footer {
+  position: relative;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  box-sizing: border-box;
+  text-align: center;
+  padding: 0px;
+  background-color: rgba(189, 187, 187, 0.6);
+  backdrop-filter: blur(10px);
+  margin-top: auto;
+}
+
+
+.clearfix::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+
+
+.box{
+    width: 100px;
+    height: 100px;
+    background-color: transparent;
+    float: right;
+    line-height: 100px;
+    text-align: center;
+    padding-right: 20px;
+    padding-top: 0px;
+    padding-left: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+#box1{
+    float: left;
+    padding-top: 23px;
+    height: auto;
+}
+
+
+#container{
+    background-color: transparent;
+}
+
+
+a{
+    color: black;
+    text-decoration: none;
+}
+
+#font{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#about{
+    margin: 30px auto;
+    max-width: 750px;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size:125%;
+}
+
+#photo{
+    width: 200 px;
+    height: 200px;
+    border-radius: 50%;
+    border-color: rgb(116, 116, 116);
+    border-width: 3px;
+    border-style: solid;
+}
+
