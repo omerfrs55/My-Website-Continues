@@ -1,6 +1,7 @@
 html {
   margin: 0;
   padding: 0;
+  scroll-behavior: smooth;
 }
 
 
@@ -100,3 +101,17 @@ a{
     border-style: solid;
 }
 
+
+#backtotop{
+  position: fixed;
+  bottom: 7px;
+  right: 20px;
+}
+#backtotop i {
+  color: rgb(90, 90, 90);
+  font-size: 45px;
+  transition: color .6s;
+}
+#backtotop i:hover{
+  color: rgb(0, 0, 0);;
+}
