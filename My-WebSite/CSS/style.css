@@ -56,7 +56,7 @@ footer {
     float: right;
     line-height: 100px;
     text-align: center;
-    padding-right: 20px;
+    padding-right: 15px;
     padding-top: 0px;
     padding-left: 15px;
     font-family: Arial, Helvetica, sans-serif;
@@ -65,7 +65,7 @@ footer {
 
 #box1{
     float: left;
-    padding-top: 23px;
+    padding-top: 22px;
     height: auto;
 }
 
@@ -107,16 +107,34 @@ a{
 }
 
 
-#backtotop{
-  position: fixed;
-  bottom: 7px;
-  right: 20px;
+@media (max-width: 576px){
+    .box {
+      width: 100px;
+      height: 100px;
+      background-color: transparent;
+      float: right;
+      line-height: 100px;
+      text-align: center;
+      padding-right: 10px;
+      padding-top: 0px;
+      padding-left: 10px;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+    #about{
+    margin: 0px auto;
+    max-width: 350px;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size:100%;
+    }
+    #photo{
+    width: 150 px;
+    height: 150px;
+    border-radius: 50%;
+    border-color: rgb(116, 116, 116);
+    border-width: 3px;
+    border-style: solid;
+    }
+    
 }
-#backtotop i {
-  color: rgb(90, 90, 90);
-  font-size: 45px;
-  transition: color .6s;
-}
-#backtotop i:hover{
-  color: rgb(0, 0, 0);;
-}
+

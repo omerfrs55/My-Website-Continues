@@ -4,17 +4,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="CSS/backToTop.css">
+    <link rel="stylesheet" href="CSS/menuforphone.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <meta name="viewport" content="width-device-width, initial-scale=1.0">
     <title>Ömer Faruk Sağlam</title>
 </head>
+
 <body id="body">
+
     <nav class="navbar">
         <header id="container" class="clearfix">
+
             <a href="omerfrs.html"> 
-                <img src="Images/wankrone2.png" class="box" id="box1">
+            <img src="Images/wankrone2.png" class="box" id="box1">
             </a>
-            <a href="Contact.html" class="box" id="font"> <b>İletişim</b></a>
-            <a href="About.html" class="box" id="font"> <b>Hakkında</b></a>
+
+            <!-- Masaüstü menü -->
+            <div class="desktop-menu">
+            <a href="Contact.html" class="box" id="font"><b>İletişim</b></a>
+            <a href="About.html" class="box" id="font"><b>Hakkında</b></a>
+            </div>
+
+            <!-- Mobil hamburger ikonu -->
+            <a href="javascript:void(0);" class="box hamburger" id="hamburger">
+            <i class="fa fa-bars"></i>
+            </a>
+
+            <!-- Mobil menü bağlantıları -->
+            <div class="mobile-menu" id="mobileMenu">
+            <a href="Contact.html" class="box" id="font"><b>İletişim</b></a>
+            <a href="About.html" class="box" id="font"><b>Hakkında</b></a>
+            </div>
 
         </header>
     </nav>
@@ -26,8 +47,19 @@
     </footer>
 
     <a href="#body" id="backtotop">
-        <i class='fas fa-arrow-circle-up' style='font-size:36px'></i>
+        <i class='fas fa-arrow-circle-up backtotop i'></i>
     </a>
 
+
+
+
+
+
+    <script>
+        document.getElementById("hamburger").addEventListener("click", function() {
+            const menu = document.getElementById("mobileMenu");
+            menu.classList.toggle("show");
+        });
+    </script>
 </body>
 </html>

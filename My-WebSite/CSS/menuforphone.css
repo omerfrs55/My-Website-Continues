@@ -1,0 +1,49 @@
+/* Masaüstü menü sadece geniş ekranda görünür */
+.desktop-menu {
+  display: flex;
+  float: right;
+}
+
+/* Mobil menü ve hamburger başlangıçta gizli */
+.mobile-menu,
+.hamburger {
+  display: none;
+}
+
+/* Mobilde hamburger görünür, desktop menü gizli */
+@media (max-width: 576px) {
+  .desktop-menu {
+    display: none;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .mobile-menu {
+    display: none;
+    flex-direction: column;
+    background-color: rgba(255, 255, 255, 0.95);
+    position: absolute;
+    top: 100px;
+    right: 15px;
+    border-radius: 10px;
+    z-index: 999;
+    background-color: rgba(255, 255, 255, 0.4); /* saydam beyaz */
+    backdrop-filter: blur(8px);                /* arka planı bulanıklaştırır */
+    -webkit-backdrop-filter: blur(8px);        /* Safari uyumu */
+    margin: 5px 0;
+    padding: 10px;
+    border-radius: 8px;
+    text-align: center;
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);      /* hafif gölge */
+    transition: background-color 0.3s ease;
+  }
+
+  .mobile-menu.show {
+    display: flex;
+  }
+}
