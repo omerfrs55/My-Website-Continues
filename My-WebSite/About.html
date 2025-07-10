@@ -6,69 +6,73 @@
     <link rel="stylesheet" href="CSS/style.css">
     <link rel="stylesheet" href="CSS/backToTop.css">
     <link rel="stylesheet" href="CSS/menuforphone.css">
+    <link rel="stylesheet" href="CSS/cards.css">
+    <link rel="stylesheet" href="CSS/about.css">
+    <link rel="stylesheet" href="CSS/mobile-cards.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <meta name="viewport" content="width-device-width, initial-scale=1.0">
     <title>Ömer Faruk Sağlam</title>
 </head>
+
 <body id="body">
 
     <nav class="navbar">
         <header id="container" class="clearfix">
 
             <a href="omerfrs.html"> 
-            <img src="Images/wankrone2.png" class="box" id="box1">
+                <img src="Images/wankrone2.png" class="box" id="box1">
             </a>
 
             <!-- Masaüstü menü -->
             <div class="desktop-menu">
-            <a href="Contact.html" class="box" id="font"><b>İletişim</b></a>
-            <a href="About.html" class="box" id="font"><b>Hakkında</b></a>
+                <a href="About.html" class="box" id="font"><b>Hakkında</b></a>
+                <a href="Contact.html" class="box" id="font"><b>İletişim</b></a>
             </div>
 
             <!-- Mobil hamburger ikonu -->
             <a href="javascript:void(0);" class="box hamburger" id="hamburger">
-            <i class="fa fa-bars"></i>
+                <i class="fa fa-bars"></i>
             </a>
 
             <!-- Mobil menü bağlantıları -->
             <div class="mobile-menu" id="mobileMenu">
-            <a href="Contact.html" class="box" id="font"><b>İletişim</b></a>
-            <a href="About.html" class="box" id="font"><b>Hakkında</b></a>
+                <a href="About.html" class="box" id="font"><b>Hakkında</b></a>
+                <a href="Contact.html" class="box" id="font"><b>İletişim</b></a>
             </div>
 
         </header>
     </nav>
 
     <main>
+        <div class="profile-section">
+            <div class="photo">
+                <div id="font" style="text-align: center; margin-top: 10px;">
+                    <img src="Images/myself.jpg" alt="Profil Fotoğrafı" id="photo">
+                </div>
+            </div>
 
-        <div id="font" style="text-align: center; margin-top: 0px;">
-            <img src="Images/myself.jpg" alt="Profil Fotoğrafı" id="photo">
+            <div class="about-wrapper">
+                <h2>Hakkımda</h2>
+                    <p>Ben Ömer Faruk Sağlam, Piri Reis Üniversitesi Bilgisayar
+                    Programcılığı 1. sınıf öğrencisiyim. Üniversite eğitimime
+                    başlamadan önce 1 yıl İngilizce hazırlık eğitimi aldım. Şu
+                    anda Acunmedya Akademi’de “Yapay Zeka ile Kodlama”
+                    eğitimi almaya devam ediyorum. Üniversitemde Java,
+                    Python, C, C#, SQL, HTML, CSS, Bootstrap ve JavaScript
+                    gibi yazılım dilleri ve teknolojileri üzerine eğitimler
+                    görmekteyim. Bu yaz döneminde 2. sınıfa geçeceğim
+                    </p>
+                    Yazılım alanına olan ilgim ve kendimi geliştirme isteğim
+                    doğrultusunda, aynı zamanda okulun da teşvikiyle staj
+                    yapabileceğim bir iş arayışındayım. Takım içinde veya
+                    bireysel olarak çalışma konusunda istekliyim ve sorumluluk
+                    aldığım görevleri özverili bir şekilde yerine getirebileceğime
+                    inanıyorum. Her geçen gün teknik becerilerimi ve iş disiplini
+                    yetkinliklerimi daha da geliştirmeyi hedefliyorum.
+                    </p>
+            </div>
         </div>
-
-
-        <div id="about">
-            <h2>Hakkımda</h2>
-                <p>Ben Ömer Faruk Sağlam, Piri Reis Üniversitesi Bilgisayar
-                   Programcılığı 1. sınıf öğrencisiyim. Üniversite eğitimime
-                   başlamadan önce 1 yıl İngilizce hazırlık eğitimi aldım. Şu
-                   anda Acunmedya Akademi’de “Yapay Zeka ile Kodlama”
-                   eğitimi almaya devam ediyorum. Üniversitemde Java,
-                   Python, C, C#, SQL, HTML, CSS, Bootstrap ve JavaScript
-                   gibi yazılım dilleri ve teknolojileri üzerine eğitimler
-                   görmekteyim. Bu yaz döneminde 2. sınıfa geçeceğim
-                </p>
-                   Yazılım alanına olan ilgim ve kendimi geliştirme isteğim
-                   doğrultusunda, aynı zamanda okulun da teşvikiyle staj
-                   yapabileceğim bir iş arayışındayım. Takım içinde veya
-                   bireysel olarak çalışma konusunda istekliyim ve sorumluluk
-                   aldığım görevleri özverili bir şekilde yerine getirebileceğime
-                   inanıyorum. Her geçen gün teknik becerilerimi ve iş disiplini
-                   yetkinliklerimi daha da geliştirmeyi hedefliyorum.
-                </p>
-        </div>
-
-        <div id="about">
-
+        <div id="skills-section">
             <h2 >Beceriler</h2>
                 <p>
                    Yapay Zeka İle Kodlama (Öğrenme Aşamasında)<br>
@@ -78,12 +82,30 @@
                    Kotlin (Temel Seviye)<br>
                    Grafik Tasarım (Canva)
                 </p>
-
         </div>
+        <div class="container">
+            <div class="cards">
+            <!-- Checkbox toggle -->
+            <input type="checkbox" id="contact-toggle" style="display: none;">
+            <!-- Kart 1 - GitHub -->
+            <a href="https://github.com/omerfrs55" data-role="left" target="_blank" class="glass" style="--r: -6deg;" data-text="GitHub" id="font1">
+                <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 24 24">
+                <path d="M12 .5C5.73.5.5 5.74.5 12.02c0 5.1 3.29 9.42 7.85 10.96.57.11.78-.25.78-.55 0-.27-.01-1.17-.01-2.13-3.19.69-3.87-1.37-3.87-1.37-.52-1.33-1.28-1.69-1.28-1.69-1.05-.72.08-.71.08-.71 1.16.08 1.77 1.19 1.77 1.19 1.03 1.76 2.71 1.25 3.37.95.1-.75.4-1.25.72-1.53-2.55-.29-5.23-1.28-5.23-5.72 0-1.26.45-2.3 1.18-3.11-.12-.29-.51-1.45.11-3.02 0 0 .96-.31 3.15 1.18a10.9 10.9 0 0 1 5.73 0c2.18-1.49 3.14-1.18 3.14-1.18.63 1.57.24 2.73.12 3.02.74.81 1.18 1.85 1.18 3.11 0 4.45-2.69 5.43-5.25 5.71.41.35.77 1.04.77 2.11 0 1.53-.01 2.76-.01 3.13 0 .31.21.67.79.55A10.52 10.52 0 0 0 23.5 12C23.5 5.74 18.26.5 12 .5z"/>
+                </svg>
+            </a>
+            <!-- Kart 2 - İletişim -->
+            <label for="contact-toggle" class="glass" style="--r: 0deg;" data-role="center" data-text="" tabindex="0">
+                <span style="font-size: 2rem; color: #474646; text-align: center;" id="font">GitHub ve LinkedIn<br>Hesaplarım</span>
+            </label>
+            <!-- Kart 3 - LinkedIn -->
+            <a href="https://www.linkedin.com/in/omerfrs55/" data-role="right" target="_blank" class="glass" style="--r: 6deg;" data-text="LinkedIn" id="font1">
+                <svg xmlns="http://www.w3.org/2000/svg" width="53" height="53" viewBox="0 0 24 24">
+                <path d="M19 0h-14c-2.76 0-5 2.24-5 5v14c0 2.76 2.24 5 5 5h14c2.76 0 5-2.24 5-5v-14c0-2.76-2.24-5-5-5zm-11 19h-3v-10h3v10zm-1.5-11.3c-.97 0-1.5-.64-1.5-1.43 0-.8.55-1.43 1.55-1.43s1.5.63 1.5 1.43c0 .79-.53 1.43-1.55 1.43zm13.5 11.3h-3v-5.4c0-1.3-.46-2.2-1.62-2.2-.89 0-1.42.6-1.65 1.18-.08.2-.1.47-.1.75v5.67h-3s.04-9.2 0-10h3v1.4c.4-.62 1.11-1.5 2.7-1.5 2 0 3.5 1.3 3.5 4.1v6z"/>
+                </svg>
+            </a>
+        </div>
+    </div>
     </main>
-
-
-
 
     <footer>
         <p>&copy; Copyright 2025 Tüm Hakları Saklıdır. <a href="mail:hege@example.com">omerfaruksaglam742@gmail.com</a></p>
@@ -99,6 +121,5 @@
             menu.classList.toggle("show");
         });
     </script>
-
 </body>
 </html>

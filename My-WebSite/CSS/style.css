@@ -9,6 +9,7 @@ html {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
   margin: 15px;
   border-radius: 10%;
+  height: 100px;
 }
 
 
@@ -60,6 +61,7 @@ footer {
     padding-top: 0px;
     padding-left: 15px;
     font-family: Arial, Helvetica, sans-serif;
+    font-size: 19px !important;
 }
 
 
@@ -87,54 +89,5 @@ a{
 
 #font{
     font-family: Arial, Helvetica, sans-serif;
-}
-
-#about{
-    margin: 30px auto;
-    max-width: 750px;
-    text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size:125%;
-}
-
-#photo{
-    width: 200 px;
-    height: 200px;
-    border-radius: 50%;
-    border-color: rgb(116, 116, 116);
-    border-width: 3px;
-    border-style: solid;
-}
-
-
-@media (max-width: 576px){
-    .box {
-      width: 100px;
-      height: 100px;
-      background-color: transparent;
-      float: right;
-      line-height: 100px;
-      text-align: center;
-      padding-right: 10px;
-      padding-top: 0px;
-      padding-left: 10px;
-      font-family: Arial, Helvetica, sans-serif;
-    }
-    #about{
-    margin: 0px auto;
-    max-width: 350px;
-    text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size:100%;
-    }
-    #photo{
-    width: 150 px;
-    height: 150px;
-    border-radius: 50%;
-    border-color: rgb(116, 116, 116);
-    border-width: 3px;
-    border-style: solid;
-    }
-    
 }
 

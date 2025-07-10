@@ -1,0 +1,28 @@
+.menu-ul {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    list-style: none;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.menu-ul li {
+    padding: 15px 10px;
+    font-weight: bold;
+    background-color: #434343;
+    border-radius: 4px;
+}
+
+.menu-ul li:hover {
+    text-decoration: underline;
+    cursor: pointer;
+    background-color: #535353;
+}
+/* Mesaj yazdırma divi cssi*/ 
+#responseText {
+    width: 100%;
+    display: block;
+    box-sizing: border-box; /* İçerik ve padding'in toplam genişliği hesaba katılsın */
+    margin: 20px 0;
+}

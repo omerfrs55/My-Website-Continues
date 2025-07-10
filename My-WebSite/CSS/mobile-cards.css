@@ -1,0 +1,128 @@
+/* Mobil cihazlar için kart tasarımı */
+@media (max-width: 768px) {
+    .container {
+        max-width: 100vw;
+        margin: 0;
+        padding: 0 20px;
+    }
+
+    .cards {
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px 0;
+    }
+
+    .cards .glass {
+        width: 280px;
+        height: 320px;
+        margin: 0;
+        transform: rotate(0deg) !important;
+        transition: 0.3s ease-in-out;
+    }
+
+    /* Mobilde hover efektini kaldır */
+    .cards:hover .glass {
+        transform: rotate(0deg) !important;
+        margin: 0;
+    }
+
+    /* Başlangıçta GitHub ve LinkedIn kartlarını gizle */
+    .cards .glass[data-role="left"],
+    .cards .glass[data-role="right"] {
+        display: none;
+        opacity: 0;
+        transform: translateY(20px);
+        transition: all 0.3s ease;
+    }
+
+    /* Checkbox checked olduğunda diğer kartları göster */
+    #contact-toggle:checked ~ .glass[data-role="left"],
+    #contact-toggle:checked ~ .glass[data-role="right"] {
+        display: flex;
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    /* İletişim kartı için tıklama efekti */
+    .cards .glass[data-role="center"],
+    .cards label[for="contact-toggle"] {
+        cursor: pointer;
+        transition: all 0.3s ease;
+        outline: none;
+    }
+
+    .cards .glass[data-role="center"]:hover,
+    .cards label[for="contact-toggle"]:hover {
+        transform: scale(1.05) !important;
+        box-shadow: 0 30px 30px rgba(0, 0, 0, 0.3);
+    }
+
+    .cards .glass[data-role="center"]:active,
+    .cards label[for="contact-toggle"]:active {
+        transform: scale(0.98) !important;
+    }
+
+    /* Kartların içeriğini mobil için optimize et */
+    .cards .glass svg {
+        width: 40px;
+        height: 40px;
+    }
+
+    .cards .glass::before {
+        height: 35px;
+        font-size: 14px;
+    }
+
+    /* İletişim kartındaki yazıyı küçült */
+    .cards .glass span {
+        font-size: 1.5rem !important;
+    }
+
+    /* GitHub ve LinkedIn kartlarındaki yazıları küçült */
+    #font1 {
+        font-size: 16px !important;
+    }
+}
+
+/* Çok küçük ekranlar için ek optimizasyon */
+@media (max-width: 480px) {
+    .container {
+        padding: 0 10px;
+    }
+
+    .cards .glass {
+        width: 250px;
+        height: 280px;
+    }
+
+    .cards .glass svg {
+        width: 35px;
+        height: 35px;
+    }
+
+    .cards .glass span {
+        font-size: 1.3rem !important;
+    }
+
+    #font1 {
+        font-size: 14px !important;
+    }
+}
+
+/* Tablet boyutları için orta seviye optimizasyon */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .container {
+        max-width: calc(100vw - 200px);
+        padding: 0 100px;
+    }
+
+    .cards .glass {
+        width: 320px;
+        height: 360px;
+        margin: 0 300px;
+    }
+
+    .cards:hover .glass {
+        margin: 0 20px;
+    }
+} 

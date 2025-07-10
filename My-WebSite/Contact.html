@@ -3,47 +3,86 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="CSS/style-contact.css">
     <link rel="stylesheet" href="CSS/backToTop.css">
+    <link rel="stylesheet" href="CSS/contact.css">
     <link rel="stylesheet" href="CSS/menuforphone.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha384-oLpiiXpt4xWRPd7F9sEHRfSWrAxJGHQPZHi3d2Ooi9ycpCxiO73JSsCMN5WB44kM" crossorigin="anonymous"></script>
     <meta name="viewport" content="width-device-width, initial-scale=1.0">
     <title>Ömer Faruk Sağlam</title>
 </head>
+
 <body id="body">
     
-    <nav class="navbar">
+    <nav class="my-navbar">
         <header id="container" class="clearfix">
 
             <a href="omerfrs.html"> 
-            <img src="Images/wankrone2.png" class="box" id="box1">
+                <img src="Images/wankrone2.png" class="my-logo" id="box1">
             </a>
 
             <!-- Masaüstü menü -->
-            <div class="desktop-menu">
-            <a href="Contact.html" class="box" id="font"><b>İletişim</b></a>
-            <a href="About.html" class="box" id="font"><b>Hakkında</b></a>
+            <div class="my-desktop-menu">
+                <a href="About.html" class="my-menu-link" id="font"><b>Hakkında</b></a>
+                <a href="Contact.html" class="my-menu-link" id="font"><b>İletişim</b></a>
             </div>
 
             <!-- Mobil hamburger ikonu -->
-            <a href="javascript:void(0);" class="box hamburger" id="hamburger">
-            <i class="fa fa-bars"></i>
+            <a href="javascript:void(0);" class="my-menu-link hamburger" id="hamburger">
+                <i class="fa fa-bars"></i>
             </a>
 
             <!-- Mobil menü bağlantıları -->
             <div class="mobile-menu" id="mobileMenu">
-            <a href="Contact.html" class="box" id="font"><b>İletişim</b></a>
-            <a href="About.html" class="box" id="font"><b>Hakkında</b></a>
+                <a href="About.html" class="my-menu-link" id="font"><b>Hakkında</b></a>
+                <a href="Contact.html" class="my-menu-link" id="font"><b>İletişim</b></a>
             </div>
 
         </header>
     </nav>
 
-    <div id="about">
-            <h2 style="margin: auto;">İletişim</h2>
-                <p><b>LinkedIn: </b> <a href="https://www.linkedin.com/in/omerfrs55/"><b>Tıklayınız</b></a></p>
-                <p><b>GitHub: </b> <a href="https://github.com/omerfrs55"><b>Tıklayınız</b></a></p>
+        <div class="row justify-content-center">
+            <div class="col-md-5 p-3 text-center">
+                <h4 id="font">İletişim Formu</h4>
+
+                <form id="contactForm">
+                <div class="mb-3">
+                    <label for="firstName" class="form-label">Adınız ve Soyadınız</label>
+                    <input type="text" class="form-control" id="firstName_lastname" placeholder="Adınızı ve Soyadınızı giriniz">
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label">E-Posta Adresiniz</label>
+                    <input type="email" class="form-control" id="email" placeholder="E-Posta adresinizi girin">
+                </div>
+                <div class="mb-3">
+                    <label for="subject" class="form-label">Konu</label>
+                    <input type="text" class="form-control" id="subject" placeholder="Konuyu girin">
+                </div>
+                <div class="mb-3">
+                    <label for="message" class="form-label">Mesajınız</label>
+                    <textarea class="form-control" id="message" rows="5" placeholder="Mesajınızı yazın"></textarea>
+                </div>
+                <button type="button" class="btn btn-success" onclick="sendMessage()">Mesaj Gönder</button>
+                </form>
+            </div>
         </div>
+
+    
+        <!-- Başarı Mesajı -->
+        <div id="successMessage" class="mt-5 text-success" style="display: none;">
+            <div class="bg-light-success text-gray p-3" style="background-color: #d4edda; color: #155724; border: 1px solid #c3e6cb; border-radius: 5px;">
+                <p id="responseText" class="mb-0"></p>
+            </div>
+        </div>
+
+        <!-- Mesaj Gönderildi kısmı -->
+        <div >
+            <div id="responseText" style="margin: 20px 0; width: 100%;"></div> 
+        </div>
+
 
     <footer>
         <p>&copy; Copyright 2025 Tüm Hakları Saklıdır. <a href="mail:hege@example.com">omerfaruksaglam742@gmail.com</a></p>
@@ -53,14 +92,11 @@
         <i class='fas fa-arrow-circle-up backtotop i'></i>
     </a>
 
-
-
     
-    <script>
-        document.getElementById("hamburger").addEventListener("click", function() {
-            const menu = document.getElementById("mobileMenu");
-            menu.classList.toggle("show");
-        });
-    </script>
+    
+    
+    
+    <script src="JavaScript/contact.js"></script>
+
 </body>
 </html>
